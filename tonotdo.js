@@ -39,6 +39,14 @@ class ToNotDoList extends HTMLElement {
 
         const removeElementButtons = [...this.shadowRoot.querySelectorAll('.list-remove-item')];
         const addElementButton = this.shadowRoot.querySelector('.list-add-item');
+        const addElementInput = this.shadowRoot.querySelector('#add-new-item-input');
+        
+        addElementInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                addElementButton.click();
+            }
+        });
 
         this.itemList = this.shadowRoot.querySelector('.list');
 
@@ -89,6 +97,11 @@ class ToNotDoList extends HTMLElement {
     }
 
     removeItem(e) {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 },
+          });
         e.target.parentNode.remove();
         this.storeItems();
     }
