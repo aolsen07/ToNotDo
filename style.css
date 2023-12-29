@@ -1,0 +1,14 @@
+#todo-container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+body {
+    display: flex;
+    align-items: center;
+}
+
+html {
+    background-color: antiquewhite;
+}
