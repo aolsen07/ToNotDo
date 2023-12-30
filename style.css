@@ -1,14 +1,21 @@
+body {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 #todo-container {
     display: flex;
     align-items: center;
     margin: 0 auto;
 }
 
-body {
-    display: flex;
-    align-items: center;
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
 }
 
-html {
-    background-color: antiquewhite;
+button:hover {
+    background-color: green;
 }
